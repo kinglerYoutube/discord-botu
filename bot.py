@@ -3,8 +3,7 @@ from discord.ext import commands
 import discord
 
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-TKN = "MTMwMTYxOTU5MDA0ODI1MTkyNA.GnMlEl.XpST2lXhs7a9_WVGIjQswotY7Qlpaq_Cjc7boY"
-#"MThwMTYxOTU5MDA0ODI1MTkyNP.hsSrV_.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
+TKN = #"MThwmTYxOTU5MDA0ODI1MTkyNP.hsSrV_.lBprZlw3Veg48snsE-bAtrvObWuZWy"
 
 initial_extensions = []
 for filename in os.listdir("./cogs"):
