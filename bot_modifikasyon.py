@@ -1,14 +1,10 @@
 import os
 import discord
 from discord.ext import commands
-import webbrowser
-import time
-from datetime import datetime
-import random
 
-class moderation(commands.Cog):
-    def _init_(self, bot):
-        self.bot = bot
+class Moderation(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot  
 
     @commands.command()
     async def selamver(self, ctx):
@@ -27,18 +23,12 @@ class moderation(commands.Cog):
         await ctx.send(f"googlede bunun için {search},bulduğum sonuclar")
 
     @commands.command()
-    async def saat_kac(self, ctx):
-        clock = datetime.now().strftime("%H:%M")
-        await ctx.send(f"şu an saat>:){clock}")
-
-
-    @commands.command()
     async def selamla(self, ctx, *, name):
         pass      #buraya ^ *, koyarsan ctx den sonrasını alır sonra herşeyi alır 
-        await ctx.send(f"merhaba, {name}")
+        await ctx.send(f"selam, {name}")
 
     @commands.command()
-    async def say(self, ctx, massage):
+    async def say(self, ctx, *, massage):
         await ctx.message.delete()
         await ctx.send(massage)    
 
@@ -63,5 +53,448 @@ class moderation(commands.Cog):
 
         await ctx.send(f"{member.mention} kullanıcısının mesajları kontrol edildi.")
 
+    @commands.command()
+    @commands.has_permissions(manage_messages=True)
+    async def temizle(self, ctx, channel_id: int, limit: int = 100):
+        # Kanalı botun bağlı olduğu sunucuda (guild) bulmak için bot nesnesi üzerinden get_channel kullanıyoruz
+        channel = self.bot.get_channel(channel_id)  # Burada self yerine self.bot kullanıyoruz
+        # Eğer kanal mevcut değilse uyarı ver
+        if channel is None:
+            await ctx.send("Bu ID ile bir kanal bulunamadı.")
+            return
+        # Belirtilen kanalda mesajları temizle
+        deleted = await channel.purge(limit=limit)
+        await ctx.send(f"{len(deleted)} mesaj {channel.name} kanalında temizlendi!", delete_after=5)
+
 async def setup(bot):
-    await bot.add_cog(moderation(bot))
+    await bot.add_cog(Moderation(bot))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import webbrowser
+import time
+from datetime import datetime
+import random
