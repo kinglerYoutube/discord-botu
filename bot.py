@@ -104,7 +104,7 @@ async def on_message(message):
             elif "özel birşey aç" in message.content.lower():
                 await message.channel.send("tamam'dır bende o iş ")
                 time.sleep(1)
-                webbrowser.get().open("https://open.spotify.com/intl-tr/album/3QvP20url5kdwLj79EmWY1?uid=a7c830e545a8a0384cc3&uri=spotify%3Atrack%3A1sBDNj0H3XaL9uXnyeyUY7")
+                webbrowser.get().open("https://www.youtube.com/watch?v=Y75Km7dlt94")
                 webbrowser.get().open("https://www.arthipo.com/image/cache/catalog/poster/mustafa-kemal-ataturk/mka153-mustafa-kemal-ataturk-bayrakla-gokyuzune-bakarken-bayrakli-portre-42-844x1200.webp")
                 time.sleep(1)
                 await message.channel.send("geçmiş on kasım kutlu olsun")
