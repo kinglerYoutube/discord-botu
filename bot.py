@@ -10,9 +10,8 @@ import webbrowser
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-TKN = "MTMwMTYxOTU5MDA0ODI1MTkyNA.GnMlEl.XpST2lXhs7a9_WVGIjQswotY7Qlpaq_Cjc7boY"
+TKN = "MThwMTYxOTU5MDA0ODI1MTkyNP.hsSrV_.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
 durum = None
-#"MThwMTYxOTU5MDA0ODI1MTkyNP.hsSrV_.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
 
 initial_extensions = []
 for filename in os.listdir("./cogs"):
