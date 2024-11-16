@@ -5,7 +5,10 @@ import webbrowser
 import time
 from datetime import datetime
 import random
+from random import choice
+import random
 
+mem_liste = os.listdir('resimler')
 class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot  
@@ -69,6 +72,13 @@ class Moderation(commands.Cog):
         # Belirtilen kanalda mesajları temizle
         deleted = await channel.purge(limit=limit)
         await ctx.send(f"{len(deleted)} mesaj {channel.name} kanalında temizlendi!", delete_after=5)
+
+    @commands.command()
+    async def mem(self, ctx):
+        mem_liste_r = random.choice(mem_liste)
+        with open(f'resimler/{mem_liste_r}', 'rb') as f:
+            picture = discord.File(f)
+            await ctx.send(file=picture)
 
 
 async def setup(bot):
