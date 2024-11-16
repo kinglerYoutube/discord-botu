@@ -10,7 +10,7 @@ import webbrowser
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-TKN = "MThwMTYxOTU5MDA0ODI1MTkyNP.hsSrV_.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
+TKN = "MThwMTYxOTU5MDA0ODI1MTkyNP.hsSr.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
 durum = None
 
 initial_extensions = []
