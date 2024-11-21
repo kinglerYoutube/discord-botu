@@ -10,7 +10,7 @@ import webbrowser
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-TKN = "MThwMTYxOTU5MDA0ODI1MTkyNP.hsSr.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig"
+TKN = MThwMTYxOTU5MDA0ODI1MTkyNP.hsSrV_.LBUrZew3Veg48sQXE-lIXBIbAtrvObWuZWyBig
 durum = None
 
 initial_extensions = []
@@ -112,6 +112,28 @@ async def on_message(message):
                 webbrowser.get().open("https://www.arthipo.com/image/cache/catalog/poster/mustafa-kemal-ataturk/mka153-mustafa-kemal-ataturk-bayrakla-gokyuzune-bakarken-bayrakli-portre-42-844x1200.webp")
                 time.sleep(1)
                 await message.channel.send("geçmiş on kasım kutlu olsun")
+
+            elif "geri dönüşüm" in message.content.lower() and "araç" in message.content.lower():
+                selection_6 = ["", "", ""]
+                selected_response = random.choice(selection_6)
+                url_1 = ["https://www.youtube.com/shorts/iduGnb4J2-0", "https://www.youtube.com/shorts/q2CIlk013oU"]
+                url_1_response = random.choice(url_1)
+                await message.channel.send(f"{selected_response}\n{url_1_response}")
+
+
+            elif "geri dönüşüm" in message.content.lower() and "saksı" in message.content.lower():
+                selection_7 = ["", "", ""]
+                selected_response = random.choice(selection_7)
+                url_2 = ["https://www.youtube.com/shorts/5I5zIoEZQ18"]
+                url_2_response = random.choice(url_2)
+                await message.channel.send(f"{selected_response}\n{url_1_response}")
+
+            elif "geri dönüşüm" in message.content.lower() and "silah" in message.content.lower():
+                selection_8 = ["", "", ""]
+                selected_response = random.choice(selection_8)
+                url_3 = ["https://www.youtube.com/watch?v=A4V-_GgPulY&ab_channel=OrigamiK%C3%BClt%C3%BCr"]
+                url_3_response = random.choice(url_2)
+                await message.channel.send(f"{selected_response}\n{url_1_response}")
 
     await bot.process_commands(message)
 
